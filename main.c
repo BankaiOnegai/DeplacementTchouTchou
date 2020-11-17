@@ -4,10 +4,11 @@ int main()
 {
     setlocale(LC_ALL, "");
     initscr();
-    printw("1\n");
+   // printw("1\n");
 
     char **train = initialisation_train();
     char **metro = initialisation_metro();
+   
 
     char train_txt[] = "train";
     char metro_txt[] = "metro";
@@ -19,25 +20,38 @@ int main()
 
 
     remplissage_mat(metro, metro_txt);
-    printf("1\n");
-    affichage(metro,metro_txt);
     remplissage_mat(train, train_txt);
-    //mouvementTotal(train, metro, train_txt, -123, 14, 0 );
-    //toTheRight(train, train_txt);
-    toTheLeft(train,train_txt);
-    //mouvement(train, train_txt);
-
-    //mouvementTotal(train , train_txt , 0 , 22 , 1);
+    erase();
+    
+    affichage(metro ,metro_txt, 0, 0, 0);
+    mouvementTotal(train, train_txt, 13,13,1);
+    /*trainEnGare('h');
+    sleep(1);
+    deplacementTrain(train, metro, train_txt,13,13,1);
+    trainEnGare('b');
+    sleep(1);
+    deplacementTrain(train, metro, train_txt,13,23,-1);
+    
+        
+        if(suivant = 0){
+            suivant = 15;
+        }
+            
+        if(actuel < suivant ){
+            
+            usleep(100000);
+            actuel ++ ;
+            
+        }
+        else if ( actuel != 0 && suivant < 10 ){
+            deplacementTrain(train, metro, train_txt, 10, 14, 1 );
+            suivant -- ;
+        }
+        */ 
 
     refresh();
-    clavier = getch();
-    printw(" clavier = %d\n", clavier);
-    refresh();
-    getch();
-    endwin();
-
-    return 0;
-
+    //clavier = getch();
+    //printw(" clavier = %d\n", clavier);
     refresh();
     getch();
     endwin();
