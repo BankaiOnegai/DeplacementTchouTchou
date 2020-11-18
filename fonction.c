@@ -49,13 +49,14 @@ char **initialisation_train()
     }
     return mat;
 }
+
 char **initialisation_trainEnGare()
 {
     char **mat = NULL;
-    mat = (char **)malloc(Haut_train * sizeof(char *));
-    for (int i = 0; i < Haut_train; i++)
+    mat = (char **)malloc(Haut_trainGare * sizeof(char *));
+    for (int i = 0; i < Haut_trainGare; i++)
     {
-        mat[i] = (char *)malloc(Long_train * sizeof(char));
+        mat[i] = (char *)malloc(Long_trainGare * sizeof(char));
     }
     return mat;
 }

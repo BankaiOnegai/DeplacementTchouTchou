@@ -16,22 +16,30 @@ int main()
     int clavier;
 
     int choix;
-    int continuer = 1;
-
+    int continuer = 10;
 
     remplissage_mat(metro, metro_txt);
     remplissage_mat(train, train_txt);
     erase();
     
+    
+    //mouvementTotal(train, train_txt, 13,13,1);
+    //trainEnGare('h');
+
     affichage(metro ,metro_txt, 0, 0, 0);
-    mouvementTotal(train, train_txt, 13,13,1);
-    /*trainEnGare('h');
     sleep(1);
-    deplacementTrain(train, metro, train_txt,13,13,1);
+    // deplacementTrain(train,-Long_train,13,13,1);
+    trainEnGare('h');
+    // sleep(1);
+    // deplacementTrain(train,13,13,Long_metro,1);
     trainEnGare('b');
     sleep(1);
-    deplacementTrain(train, metro, train_txt,13,23,-1);
-    
+    // deplacementTrain(train,13,23,0,-1);
+    // printf("TEST \n");
+    // erase();
+    // refresh();
+
+    /*
         
         if(suivant = 0){
             suivant = 15;
@@ -48,8 +56,6 @@ int main()
             suivant -- ;
         }
         */ 
-
-    refresh();
     //clavier = getch();
     //printw(" clavier = %d\n", clavier);
     refresh();
